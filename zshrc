@@ -39,15 +39,15 @@ alias cd="z"
 # LSD to use icons or not
 ([ -n "$DISPLAY" ] || [ -n $SSH_TTY ]) && alias lsd="lsd --icon always" || alias lsd="lsd --icon never"
 
+# More rust garbage
+eval "$(zoxide init zsh)"
+
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 unsetopt nomatch
-
-# More rust garbage
-eval "$(zoxide init zsh)"
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
