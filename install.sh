@@ -26,4 +26,5 @@ sed -i 's/^#net.ipv4.conf.all.rp_filter=1/net.ipv4.conf.all.rp_filter=1/'       
 cp pfetch /usr/local/bin/
 
 cp zshrc /etc/
-echo "# stub" > ~/.zshrc
+echo "source /etc/zshrc" > ~/.zshrc # apparently /etc/zshrc works only directly on openbsd, have to import on debian
+chsh -s $(which zsh)
