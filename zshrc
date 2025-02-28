@@ -34,13 +34,6 @@ alias grep="grep --color"
 alias mkdir="mkdir -p"
 alias cp="cp -r"
 alias btop="btop --utf-force"
-alias cd="z"
-
-# LSD to use icons or not
-([ -n "$DISPLAY" ] || [ -n $SSH_TTY ]) && alias lsd="lsd --icon always" || alias lsd="lsd --icon never"
-
-# More rust garbage
-eval "$(zoxide init zsh)"
 
 autoload -U compinit
 zstyle ':completion:*' menu select
