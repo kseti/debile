@@ -2,7 +2,6 @@ debian-keyring
 debian-archive-keyring
 apt-transport-https
 ca-certificates
-curl
 wget
 git
 zsh
