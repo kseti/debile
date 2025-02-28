@@ -37,7 +37,7 @@ alias btop="btop --utf-force"
 alias cd="z"
 
 # LSD to use icons or not
-[ -n "$DISPLAY" || -n $SSH_TTY ] && alias lsd="lsd --icon always" || alias lsd="lsd --icon never"
+([ -n "$DISPLAY" ] || [ -n $SSH_TTY ]) && alias lsd="lsd --icon always" || alias lsd="lsd --icon never"
 
 autoload -U compinit
 zstyle ':completion:*' menu select
