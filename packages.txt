@@ -1,12 +1,10 @@
-debian-keyring
-debian-archive-keyring
 apt-transport-https
 ca-certificates
 wget
 git
 zsh
 zsh-syntax-highlighting
-hzsh-autosuggestions
+zsh-autosuggestions
 lsd
 zoxide
 neovim

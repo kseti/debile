@@ -2,7 +2,7 @@
 
 install -m 0755 -d /etc/apt/keyrings
 
-apt-get install curl
+apt-get install -y curl debian-keyring debian-archive-keyring
 
 # Caddy
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
@@ -17,7 +17,7 @@ echo \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 apt-get update && apt-get upgrade
-apt-get install -y "$(cat packages.txt | tr '\n' ' '")"
+apt-get install -y "$(cat packages.txt | tr '\n' ' ')"
 
 sed -i 's/^#HandleLidSwitch=suspend/HandleLidSwitch=ignore/'                      /etc/systemd/logind.conf
 sed -i 's/^#net.ipv4.conf.default.rp_filter=1/net.ipv4.conf.default.rp_filter=1/' /etc/sysctl.conf
