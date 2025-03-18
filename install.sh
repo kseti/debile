@@ -23,7 +23,8 @@ sed -i 's/^#HandleLidSwitch=suspend/HandleLidSwitch=ignore/'                    
 sed -i 's/^#net.ipv4.conf.default.rp_filter=1/net.ipv4.conf.default.rp_filter=1/' /etc/sysctl.conf
 sed -i 's/^#net.ipv4.conf.all.rp_filter=1/net.ipv4.conf.all.rp_filter=1/'         /etc/sysctl.conf
 
-cp pfetch /usr/local/bin/
+mkdir ~/.config/fastfetch/
+cp fastfetch-small.jsonc ~/.config/fastfetch/ # download the deb manually i'm too lazy to do this automatically plus it will be on trixie
 
 cp zshrc /etc/
 echo "source /etc/zshrc" > ~/.zshrc # apparently /etc/zshrc works only directly on openbsd, have to import on debian

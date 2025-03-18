@@ -1,4 +1,5 @@
-PF_INFO="ascii title os wm kernel uptime pkgs memory" pfetch
+# Load fastfetch on startup
+fastfetch --config ~/.config/fastfetch/small.jsonc
 
 autoload -U colors && colors
 
